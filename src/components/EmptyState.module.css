@@ -1,0 +1,25 @@
+.empty {
+  text-align: center;
+  padding: 52px 24px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1.5px dashed var(--gray-200);
+}
+
+.icon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+.msg {
+  font-size: 15px;
+  color: var(--gray-700);
+  margin-bottom: 6px;
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--gray-400);
+}

@@ -1,0 +1,32 @@
+.toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 360px;
+  box-shadow: var(--shadow-lg);
+  animation: fadeIn 0.25s ease;
+}
+
+.success {
+  background: #166534;
+  color: #dcfce7;
+}
+
+.error {
+  background: #991b1b;
+  color: #fee2e2;
+}
+
+.icon {
+  font-size: 16px;
+  font-weight: 700;
+  opacity: 0.85;
+}

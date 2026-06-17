@@ -1,0 +1,106 @@
+/* ── Reset & Base ─────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --indigo-900: #1e1b4b;
+  --indigo-700: #3730a3;
+  --indigo-500: #6366f1;
+  --indigo-400: #818cf8;
+  --indigo-100: #e0e7ff;
+  --indigo-50:  #eef2ff;
+
+  --violet-500: #8b5cf6;
+  --violet-100: #ede9fe;
+
+  --sky-500:    #0ea5e9;
+  --sky-100:    #e0f2fe;
+
+  --amber-500:  #f59e0b;
+  --amber-100:  #fef3c7;
+
+  --emerald-500:#10b981;
+  --emerald-100:#d1fae5;
+
+  --rose-500:   #f43f5e;
+  --rose-100:   #ffe4e6;
+
+  --red-500:    #ef4444;
+  --red-100:    #fee2e2;
+
+  --gray-900:   #111827;
+  --gray-700:   #374151;
+  --gray-500:   #6b7280;
+  --gray-400:   #9ca3af;
+  --gray-200:   #e5e7eb;
+  --gray-100:   #f3f4f6;
+  --gray-50:    #f9fafb;
+
+  --bg:         #f5f5fb;
+  --surface:    #ffffff;
+
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  14px;
+
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:  0 4px 16px rgba(99,102,241,0.08), 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-lg:  0 20px 60px rgba(0,0,0,0.16);
+
+  --font-body:  'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
+
+  --nav-h:      56px;
+}
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--gray-900);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s, box-shadow 0.15s;
+}
+button:hover  { opacity: 0.88; }
+button:active { transform: scale(0.97); }
+
+input, textarea {
+  font-family: var(--font-body);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--indigo-500) !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
