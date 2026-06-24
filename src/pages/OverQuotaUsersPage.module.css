@@ -1,0 +1,273 @@
+.page {
+  max-width: 1200px;
+}
+
+.toolbar {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 90;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.12), var(--shadow-sm);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filterLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filterInput {
+  width: 220px;
+  padding: 9px 13px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-900);
+  background: var(--gray-50);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.filterInput:focus {
+  outline: none;
+  border-color: var(--indigo-400);
+  box-shadow: 0 0 0 3px var(--indigo-100);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+.clearBtn {
+  padding: 6px 12px;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  background: var(--gray-50);
+  color: var(--gray-700);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.selectAllBtn,
+.reviveBtn {
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+}
+
+.selectAllBtn {
+  background: var(--sky-500);
+}
+
+.selectAllBtn:disabled,
+.reviveBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.reviveBtn {
+  background: var(--emerald-500);
+}
+
+.checkboxCol {
+  width: 44px;
+  text-align: center;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--indigo-500);
+  cursor: pointer;
+}
+
+.selectedRow {
+  background: var(--indigo-50);
+}
+
+.selectedRow:hover {
+  background: var(--indigo-100);
+}
+
+.noMatches {
+  padding: 28px;
+  text-align: center;
+  color: var(--gray-500);
+  background: var(--surface);
+  border: 1.5px dashed var(--gray-200);
+  border-radius: var(--radius-lg);
+}
+
+.tableWrap {
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table th,
+.table td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.table th {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  background: var(--gray-50);
+  white-space: nowrap;
+}
+
+.sortableTh {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.sortableTh:hover {
+  color: var(--indigo-500);
+}
+
+.sortableThActive {
+  color: var(--indigo-700);
+}
+
+.sortIcon {
+  font-size: 10px;
+  line-height: 1;
+  color: var(--gray-400);
+}
+
+.sortableThActive .sortIcon {
+  color: var(--indigo-500);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: var(--indigo-50);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.genderBadge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--violet-100);
+  color: var(--indigo-700);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.quotaList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 280px;
+}
+
+.quotaItem {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  line-height: 1.4;
+}
+
+.quotaId {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--indigo-500);
+  background: var(--indigo-50);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.quotaName {
+  color: var(--gray-700);
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filterInput {
+    width: 100%;
+  }
+
+  .stats {
+    justify-content: space-between;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .selectAllBtn,
+  .reviveBtn {
+    flex: 1;
+  }
+}

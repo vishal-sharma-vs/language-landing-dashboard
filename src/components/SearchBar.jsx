@@ -30,17 +30,19 @@ export default function SearchBar({
             <><span>🔍</span> Fetch</>
           )}
         </button>
-        <button
-          className={`${styles.btn} ${styles.cloneBtn}`}
-          onClick={onClone}
-          disabled={cloneLoading}
-        >
-          {cloneLoading ? (
-            <><span className={styles.btnSpinner} /> Cloning…</>
-          ) : (
-            <><span>📋</span> Clone</>
-          )}
-        </button>
+        {onClone && (
+          <button
+            className={`${styles.btn} ${styles.cloneBtn}`}
+            onClick={onClone}
+            disabled={cloneLoading}
+          >
+            {cloneLoading ? (
+              <><span className={styles.btnSpinner} /> Cloning…</>
+            ) : (
+              <><span>📋</span> Clone</>
+            )}
+          </button>
+        )}
       </div>
     </div>
   );

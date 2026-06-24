@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:5000/dashboard';
+const BASE = 'https://nodeapi.monetanalytics.com/dashboard/dashboard';
 
 async function request(path, options = {}) {
   const res = await fetch(`${BASE}${path}`, {
