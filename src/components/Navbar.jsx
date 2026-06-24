@@ -3,8 +3,9 @@ import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
 const NAV_ITEMS = [
-  { to: '/language',     label: 'Language',     icon: '🌐' },
-  { to: '/landing-page', label: 'Landing Page',  icon: '🏠' },
+  { to: '/language',         label: 'Language',         icon: '🌐' },
+  { to: '/landing-page',     label: 'Landing Page',     icon: '🏠' },
+  { to: '/over-quota-users', label: 'Over Quota Users', icon: '📊' },
 ];
 
 export default function Navbar() {
